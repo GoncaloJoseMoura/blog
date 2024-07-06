@@ -1,0 +1,34 @@
+.header {
+  background-color: #f2f2f2;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    color: #333333;
+    gap: 10px;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .loginButton {
+    background-color: #c02942;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+  }
+}
