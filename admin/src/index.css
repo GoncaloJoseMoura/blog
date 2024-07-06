@@ -121,7 +121,7 @@
   .login_view {
     grid-column: 2;
     grid-row: 1;
-    background-image: url("forest.jpg");
+    background-image: url("../public/forest.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
