@@ -1,0 +1,13 @@
+
+// CREATE Users by id
+POST http://localhost:3000/comments/create
+Content-Type: application/json
+
+{
+    "comment": "This is a Another Title",
+    "user":  "66853e67c879b6610ea2f76b",
+    "article": "668958025f68cf3b3282c6f1"
+}
+
+###
+GET http://localhost:3000/comments/66856105539865fb9a03be7f

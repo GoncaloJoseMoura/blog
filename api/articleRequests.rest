@@ -1,0 +1,68 @@
+GET http://localhost:3000/articles/
+
+###
+
+POST http://localhost:3000/articles/create HTTP/1.1
+Content-Type: multipart/form-data; boundary=gc0p4Jq0M2Yt08jU534c0p
+
+--gc0p4Jq0M2Yt08jU534c0p
+Content-Disposition: form-data; name="title"
+
+this is the title
+--gc0p4Jq0M2Yt08jU534c0p
+Content-Disposition: form-data; name="user"
+
+66853e67c879b6610ea2f76b
+--gc0p4Jq0M2Yt08jU534c0p
+Content-Disposition: form-data; name="text"
+
+this is the text
+--gc0p4Jq0M2Yt08jU534c0p
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/jpg
+
+< ./test.jpg
+--gc0p4Jq0M2Yt08jU534c0p
+
+###
+
+POST http://localhost:3000/articles/create
+Content-Type: application/json
+
+{
+    "title": "This is a Another Title",
+    "user": {
+        "_id": "66853e67c879b6610ea2f76b"
+    },
+    "text": "this is another text"
+}
+###
+
+POST http://localhost:3000/articles/create
+Content-Type: multipart/form-data
+
+form:
+  title: "This is a Another Title"
+  text: "this is another text"
+  user: "66853e67c879b6610ea2f76b"
+  image: "./mario.jpg"
+
+###
+
+PUT http://localhost:3000/articles/66856138539865fb9a03be87/update
+Content-Type: application/json
+
+{
+    "title": "This is updated",
+    "user": {
+        "_id": "66853e67c879b6610ea2f76b"
+    },
+    "text": "this is the new text 1"
+}
+
+###
+DELETE http://localhost:3000/articles/66856138539865fb9a03be87/delete 
+
+###
+
+GET http://localhost:3000/articles/6685647316dbeb0b87d972d1

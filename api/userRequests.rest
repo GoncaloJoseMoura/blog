@@ -1,0 +1,29 @@
+
+// CREATE Users by id
+POST http://localhost:3000/users/sign-up
+Content-Type: application/json
+
+{
+    "first_name": "John",
+    "last_name": "Silva",
+    "email": "jonefcfhhh.silva@gmail.com",
+    "password": "11231231234",
+    "c_password": "11231231234"
+}
+
+###
+
+
+// CREATE Users by id
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "jonhhh.silva@gmail.com",
+    "password": "11231231234"
+}
+
+###
+
+GET http://localhost:3000/users/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Njg1NjRjZDE2ZGJlYjBiODdkOTcyZTMiLCJlbWFpbCI6ImpvbmhoaC5zaWx2YUBnbWFpbC5jb20iLCJpYXQiOjE3MjAwMTkxMTM1ODksImV4cCI6MTcyMDAxOTExMzYwNH0.xiGKydq8JJfo08jmJwug5Tf1H79eyMLe4k5dQLKA
