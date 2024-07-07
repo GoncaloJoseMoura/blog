@@ -7,7 +7,7 @@ export default function ArticleList() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/articles/')
+    fetch(`${import.meta.env.VITE_BASE_URL}/articles/`)
       .then((response) => response.json())
       .then((data) => setArticles(data.articles))
       .catch((error) => setError(error))
