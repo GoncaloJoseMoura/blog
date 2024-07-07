@@ -12,7 +12,7 @@ export default function Footer() {
         }}
       >
         <p>Developed By GoncaloJoseMoura</p>
-        <img src="../public/github.png" alt="" />
+        <img src="github.png" alt="" />
       </a>
     </div>
 
