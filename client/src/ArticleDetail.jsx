@@ -12,12 +12,12 @@ export default function ArticleDetail() {
   const { article } = location.state;
 
   useEffect(() => {
-    fetch(`http://localhost:3000/comments/${article._id}`)
+    fetch(`${import.meta.env.VITE_BASE_URL}/comments/${article._id}`)
       .then((response) => response.json())
       .then((data) => setComments(data.comments));
 
     if (localStorage.getItem('accessToken')) {
-      fetch('http://localhost:3000/users/protected', {
+      fetch(`${import.meta.env.VITE_BASE_URL}/users/protected`, {
         method: 'GET',
         headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
       })
